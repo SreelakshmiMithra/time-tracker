@@ -10,7 +10,7 @@ Unlike standard to-do lists, this app enforces a strict 24-hour limit, preventin
 
 📂 GitHub Repository: [https://github.com/SreelakshmiMithra/time-tracker]
 
-🚀 Live Demo: [INSERT YOUR DEPLOYED LINK HERE]
+🚀 Live Demo: [[INSERT YOUR DEPLOYED LINK HERE](https://aipoweredtimetracker.netlify.app/)]
 
 📹 Video Walkthrough  
 [Click here to watch the video](assets/video/video.mp4)
