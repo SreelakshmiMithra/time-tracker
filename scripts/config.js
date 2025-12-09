@@ -5,7 +5,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAnhnV_mq9mm9U-H_P3LDQmGg1ljmiDezU",
+  apiKey: "AIzaSyB_Z78-560cQUo03vlfKUlLfNbMqcLxRE4",
   authDomain: "dashboard-89e93.firebaseapp.com",
   projectId: "dashboard-89e93",
   storageBucket: "dashboard-89e93.firebasestorage.app",
