@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Time Tracker</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Chart.js CDN for Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-brand">
+            <h2>⏰ Time Tracker</h2>
+            <span id="userEmail" class="user-badge"></span>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Date Selection Section -->
+        <div class="date-section">
+            <h3>📅 Select Date</h3>
+            <input type="date" id="date" />
+            <p class="info-text">Select a date to view or log activities.</p>
+        </div>
+
+        <!-- Activity Input Section -->
+        <div class="activity-input-section">
+            <h3>➕ Add Activity</h3>
+            <input type="text" id="activityName" placeholder="Activity Name (e.g., Coding, Gym)" />
+            
+            <div class="input-row">
+                <select id="category">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Work">💼 Work</option>
+                    <option value="Study">📚 Study</option>
+                    <option value="Sleep">😴 Sleep</option>
+                    <option value="Exercise">🏃 Exercise</option>
+                    <option value="Entertainment">🎮 Entertainment</option>
+                    <option value="Food">🍽️ Food</option>
+                    <option value="Commute">🚗 Commute</option>
+                    <option value="Social">👥 Social</option>
+                    <option value="Other">📌 Other</option>
+                </select>
+                <input type="number" id="duration" placeholder="Minutes" min="1" max="1440" />
+            </div>
+            
+            <button id="addActivityBtn">➕ Add Activity</button>
+            
+            <div class="remaining-time">
+                <p>⏱️ Remaining: <span id="remaining">1440</span> minutes</p>
+                <p class="info-text" id="statusText">Log exactly 1440 minutes to unlock analysis.</p>
+            </div>
+        </div>
+
+        <!-- Activities List Section -->
+        <div class="activities-section">
+            <h3>📋 Timeline</h3>
+            <div id="activityList">
+                <!-- Activities will be injected here via JS -->
+            </div>
+        </div>
+
+        <!-- Analyse Button -->
+        <div class="analyse-section">
+            <button id="analyseBtn" disabled>📊 Analyse Day (Locked)</button>
+        </div>
+
+        <!-- Analytics Dashboard Section -->
+        <div class="analytics-section" id="analyticsSection" style="display: none;">
+            <div class="analytics-header">
+                <h3>📊 Daily Analytics</h3>
+                <span class="badge">AI Powered Insights</span>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Total Time</h4>
+                    <p id="totalTime">0h 0m</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Activities</h4>
+                    <p id="totalActivities">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Categories</h4>
+                    <p id="totalCategories">0</p>
+                </div>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <div class="category-breakdown" id="categoryBreakdown"></div>
+        </div>
+    </div>
+
+    <!-- Main Logic Script -->
+    <script type="module" src="../scripts/dashboard.js"></script>
+</body>
+</html>

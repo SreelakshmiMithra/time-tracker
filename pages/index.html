@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracker - Login</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="landing-bg">
+        <div class="container">
+            <div class="logo-section">
+                <h1>⏰ Time Tracker</h1>
+                <p class="tagline">Master your 24 hours (1440 minutes) with AI precision.</p>
+            </div>
+            
+            <div class="auth-box">
+                <h2>Welcome Back</h2>
+                <input type="email" id="email" placeholder="Email Address" />
+                <input type="password" id="password" placeholder="Password" />
+                
+                <button id="loginBtn">Login</button>
+                <button id="signupBtn" class="secondary">Create Account</button>
+                
+                <div class="divider">OR</div>
+                
+                <button id="googleLoginBtn" class="google-btn">
+                    🔐 Continue with Google
+                </button>
+            </div>
+            
+            <div class="features">
+                <p>✅ Strict 24-hour logging logic</p>
+                <p>📊 Visual analytics dashboard</p>
+                <p>🔒 Secure Cloud Storage</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Link to Auth Script -->
+    <script type="module" src="../scripts/auth.js"></script>
+</body>
+</html>
